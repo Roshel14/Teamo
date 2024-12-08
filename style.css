@@ -1,0 +1,52 @@
+body{
+  background-color: #f9c5c8;
+  overflow: hidden;
+}
+
+.heart__wrapper {
+  background-color: red;
+  position: relative;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  margin: 20% auto;
+}
+
+.heart {
+  top: 40%;
+  width: 30%;
+  height: 30%;
+  background: #f9c5c8;
+  transform: rotate(45deg);
+  position: relative;
+  margin: auto;
+
+}
+
+.heart::before, .heart::after {
+  z-index: -1;
+  content: "";
+  background-color: #f9c5c8;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -50%;
+}
+
+.heart::after {
+  left: -50%;
+}
+
+.heart {
+    animation: beat 0.2s infinite;
+}
+
+@keyframes beat{
+  30% {
+    transform: rotate(45deg) scale(1.1);
+  }
+}
